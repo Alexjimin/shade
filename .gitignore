@@ -2,3 +2,6 @@ src
 output
 __pycache__
 compressed
+font
+output
+src

@@ -1,7 +1,7 @@
 import PIL.Image
 from PIL import ImageDraw, ImageFont
-import sys
 import numpy as np
+import io
 
 def compress(args):
 	infile = ""
@@ -60,7 +60,7 @@ def compress(args):
 		outfile = f"output/{infile.split('.')[0][4:]}_processed"
 		
 	ret = ""
-	with open(outfile+".txt", "w") as f:
+	with io.open(outfile+".txt", "w", encoding="utf-8") as f:
 		for y, row in enumerate(shade):
 			for x, item in enumerate(row):
 				shade[y][x] = shadelist[int(item/max_shade * len(shadelist))]

@@ -3,8 +3,7 @@ import compresstext
 import sys
 
 args = sys.argv
-print(args)
-if args == []:
+if args == ["main.py"]:
 	print("Usage: python3 shade.py -if <input> -of <output> --shadelist <texts | shades | barcode | braille> --font <font> --compress <level>")
 	exit()
 
